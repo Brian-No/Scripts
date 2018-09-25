@@ -1,0 +1,4 @@
+for i in {1..295}                           [12:36PM]
+do
+cd /media/sf_MShared/Final/Assembly2/$i; mkdir familyblast; cd /home/manager/blast/PGenomes; echo "Start Blast" $i; blastn -query /media/sf_MShared/Final/Assembly2/$i/unassigned.fasta -db pgenomes.fasta -out /media/sf_MShared/Final/Assembly2/$i/familyblast/resultse10.txt -evalue 1e-10 -outfmt "6 qseqid sseqid stitle evalue bitscore pident length qstart qend sstart send mismatch gapopen" -show_gis -num_threads 2 &>> /media/sf_MShared/Final/Assembly2/$i/familyblast/logblast.txt; echo "Finish" $i
+done
