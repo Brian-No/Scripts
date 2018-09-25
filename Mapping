@@ -1,0 +1,5 @@
+
+bowtie2-build TW14359.fasta Spin #create bowtie2 index 
+
+#map 
+bowtie2 -x Spin -1 '/media/sf_ManningLab/Brian/Bact/4/Forward.fastq.gz' -2 '/media/sf_ManningLab/Brian/Bact/4/Reverse.fastq.gz' -S 170041_Spin.sam --un-conc 170041unmapped.fq --al-conc 170041mapped.fq -p 4
