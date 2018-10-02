@@ -1,0 +1,11 @@
+A <- matrix(c(1,0,0,0,1,1,0,1,1,1,0,1), 3,4)
+A
+B = t(A)
+B
+
+R=B %*% A
+diag(R) <- 0  
+R
+
+counts = matrix(c(1,2,1,1),4,1)
+counts
